@@ -56,8 +56,8 @@ app.get('/about', (req, res) => {
 });
 app.get('/projects', (req, res) => {
     res.render('projects.hbs', {
-        pageTitle: 'Projects Page',
-        welcomeMessage: 'Portfolio page here'
+        pageTitle: 'Projects page',
+        welcomeMessage: 'Portfolio page text goes here'
     })
 });
 app.get('/bad', (req, res) => {
