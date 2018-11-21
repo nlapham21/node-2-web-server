@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.port || 3000;
 var app = express();
 
 // Setup for hbs
@@ -59,7 +60,7 @@ app.get('/bad', (req, res) => {
     });
 });
 
-// Put app on port 3000
-app.listen(3000, () => {
-    console.log('Server is up on port 3000\n');
+// Put app on port environment variable (for heroku's use)
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}\n`);
 });
